@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/senaproyecto/css/adminStilos.css?v=1.0">
+    <link rel="stylesheet" href="http://localhost/senaproyecto/css/adminStilos.css?v=1.1">
     <title>Administrador</title>
 </head>
 <body>
@@ -18,8 +18,7 @@ if (!isset($_SESSION['user_admin'])) {
 }
 
 ?>
-    <div class="imagen" >
-    </div>
+    
 <header>  
     <nav class="opciones">
     <ul class="nav-pag">
@@ -50,8 +49,8 @@ if (!isset($_SESSION['user_admin'])) {
 </nav>
 
             <a href="" class="tAdmin">
-                <button>Administrativo
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="44" height="70" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <button class="badmin">Administrativo
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="35" height="70" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
                 <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
@@ -90,7 +89,7 @@ if (!isset($_SESSION['user_admin'])) {
         </div>
     </section>
     <a href="http://localhost/senaproyecto/html/inicio.html">
-    <button class="salir">volver</button>
+    <button class="salir">Cerrar Sesión</button>
     </a>
     <script src="http://localhost/senaproyecto/javascript/Funciones.js"></script>
 </body>

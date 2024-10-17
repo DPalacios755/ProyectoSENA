@@ -11,16 +11,14 @@ h1{
     text-align: center;
     margin: 2%;
     font-size: 3rem;
+    width: auto;
 }
 table{
-    
     width: 100%;
     justify-content: center;
     text-align: center;
     padding: 3%;
-    border: none;
-    
-    
+    border: none; 
 }
 th{
     
@@ -31,49 +29,53 @@ th{
     background-color: #0097b2;
     border-radius: 10px;
     
+    
+}
+.cnombre{
+    background-color: #424242;
 }
 td{
     
     border-color: black;
     border:2px solid;
     font-weight: bold;
-    border-radius: 10px;
-
-    
+    border-radius: 10px;   
 }
 button{
     margin: 4px;
     background: none;
-    border-radius: 10px;
-    width:auto;
+    border-radius: 20px;
     font-size: 1rem;
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
     gap: 10px;
+    width: 100%;
 }
 button:hover{
     background-color: #0097b2;
+    
 }
 section{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);  
+    display: flex;
     justify-content: center;
+    width: 100%;
+    gap: 10px;
+    
+
     
     
 }
 .crear{
-    width: 30%;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
-    align-content   : center;
     font-size: 1.5rem;
+
     
 }
 .volver{
-    width: 20%;
+    width:100%;
     justify-content: center;
-    flex-direction: column;
-    align-content   : center;
     font-size: 1.5rem;
 }
 .volver:hover{
@@ -84,5 +86,10 @@ a{
     display: flex;
     justify-content: center;
     text-decoration: none;
+    width: 100%;
+    padding: 2%;
     
 }
+
+
+

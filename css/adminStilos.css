@@ -5,6 +5,7 @@
     --color2:#48cfcb;
     --color3:#229799;
     --color4:#424242;
+    --color5:#052549;
 }
 body{
 
@@ -13,30 +14,13 @@ body{
     box-sizing: border-box;
     justify-content: center;
     
-}
-
-.imagen{
-    justify-content: center;
-    display: flex;
-    width: 100%;
-
-}
-
-.imagen:before{
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    background-image: url('images.png');
-    content:"";
-    margin: auto;
-    width: 50%;
-    height:80%;
-    background-size: cover;
-    opacity: 0.2;  
-    z-index: -1;
-    background-position: center;
     
 }
+path:hover{
+    color: #ffffff;
+    stroke: #ffffff;
+}
+
 header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -47,6 +31,7 @@ header {
     background-color: var(--color3);
     border-radius: 10px;
     
+    
 }
 
 
@@ -54,14 +39,12 @@ header {
     display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
     width: 100%;
+    
     
 }
 .nav-pag{
     list-style-type: none;
-    margin: 2%;
-
     display: flex;
     gap: 25px; 
 }
@@ -84,6 +67,7 @@ button{
     color: black;
     font-weight: bold;
     width: 100%;
+    height: 40px;
     border-radius: 10px;
     
     
@@ -114,17 +98,20 @@ button:hover{
     border-radius: 10px;
     display: grid;
     text-align: center;
+    box-shadow: 0px 0px 90px -30px rgba(0, 0, 0, 9);
 }
 
 .bDocente{
     border: 0.3rem solid;
     margin: 2%;
     border-radius: 10px;
+    box-shadow: 0px 0px 90px -30px rgba(0, 0, 0, 9);
 }
 .bAdmin{
     border: 0.3rem solid;
     margin: 2%;
     border-radius: 10px;
+    box-shadow: 0px 0px 90px -30px rgba(0, 0, 0, 9);
 }
 .herramientas{
     display: grid;
@@ -132,65 +119,58 @@ button:hover{
     margin: 2%;
     padding: 2%;
     border: 0.2rem solid;
+    margin-left: 15%;
+    margin-right: 15%;
     font-size: 1.4rem;
     grid-template-rows: repeat(1, 1fr);
+    background-color: var(--color3);
     
 }
 a{
     text-decoration:none;
     color: black;
     display: flex;
+    justify-content: center;
    
     
 }
 a:hover{
-    color: #0097b2;
+    color: white;
 
 }
-@media (max-width:1024px ){
+.salir{
+    width: 20%;
+    border: solid;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
 
-    .imagen{
-        display: flex;
-        justify-content:center;
-        margin: 0%;
-        width: 100%;
-        
+}
+@media (max-width:900px ){
+
     
-    }
-    
-    .imagen:before{
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        background-image: url('images.png') ;
-        content:"";
-        margin:0%;
-        width: 100%;
-        height:80%;
-        background-size:cover;
-        opacity: 0.2;  
-        z-index: -1;
-        background-position: center;
-        
-    }
     header {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin: 0%;
-        padding: 0rem;
-        align-items: start;
+        display: flex;
+        height: 70px;
+        width: auto;
         color: #a6a6a6;
         justify-content: center;
+        align-items: start  ;
+        
+
     }
     .tAdmin{
-        align-items:center;
-        padding: 0.1rem;
+        align-items:start;
+        padding: 0rem;
+        width: 100%;
+        
     }
 
     .opciones{
         display: flex;
         margin: 0%;
-        text-align: center;
+        text-align: start;
         flex-direction: column-reverse;
         border: none;
         padding: 1rem;
@@ -198,17 +178,27 @@ a:hover{
     }
     .nav-pag {
         display: none;
-        
-        flex-direction: column;
         gap: 0%;
+        
     }
     .nav-pag.active{
         display: flex;
+        flex-direction: column;
+        background-color: var(--color3);
+        z-index: 1;
+        border:solid ;
+        border-radius: 20px;
+        
+
         
     }
     .nav-pag li{
         margin: 0;
         
+    }
+    ul.nav-pag{
+        padding: 1%;
+        margin: 1%;
     }
     .nav-pag a {
         display: block;
@@ -224,7 +214,7 @@ a:hover{
         justify-content: center;
         text-decoration:solid;
         border: none;
-        font-size: 1.7rem;
+        font-size: 1.25rem;
         font-family: "Quicksand", sans-serif;
         background:none;
         color: black;
@@ -232,14 +222,22 @@ a:hover{
         width: 100%;
         height: 70px;
     } 
+    
+    .tituloCentro{
+        text-align: center;
+        font-size: 1.3rem;
+        margin: 5%;
+    
+    
+    }
     .baseDatos{
         display: flex;
         text-align: center;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 0%;
-        width: 100%;
+        margin: 6%;
+        width: auto;
         font-weight: bold;
     }
     .bEstudiante{
@@ -257,5 +255,14 @@ a:hover{
         border: 0.3rem solid;
         margin: 3%;
         width: 100%;
+    }
+    .salir{
+        width: 50%;
+        border: solid;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+    
     }
 }
