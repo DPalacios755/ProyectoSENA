@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/senaproyecto/css/adminStilos.css?v=1.1">
+    <link rel="stylesheet" href="senaproyecto/css/adminStilos.css?v=1.1">
     <title>Administrador</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
 session_start();
 
 if (!isset($_SESSION['user_admin'])) {
-    header("Location: http://localhost/senaproyecto/php/administrativos/perfilAdmin.php");
+    header("Location: senaproyecto/php/administrativos/perfilAdmin.php");
 }
 
 ?>
@@ -88,7 +88,7 @@ if (!isset($_SESSION['user_admin'])) {
             </div>
         </div>
     </section>
-    <a href="http://localhost/senaproyecto/html/index.html">
+    <a href="http://localhost/senaproyecto/index.html">
     <button class="salir">Cerrar Sesión</button>
     </a>
     <script src="http://localhost/senaproyecto/javascript/Funciones.js"></script>
