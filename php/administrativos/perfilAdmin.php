@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="senaproyecto/css/adminStilos.css?v=1.1">
+    <link rel="stylesheet" href="http://localhost/senaproyecto/css/adminStilos.css?v=1.1">
     <title>Administrador</title>
 </head>
 <body>
@@ -14,7 +14,7 @@
 session_start();
 
 if (!isset($_SESSION['user_admin'])) {
-    header("Location: senaproyecto/php/administrativos/perfilAdmin.php");
+    header("Location: http://localhost/senaproyecto/php/administrativos/perfilAdmin.php");
 }
 
 ?>
