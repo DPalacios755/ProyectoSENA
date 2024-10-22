@@ -88,7 +88,7 @@ if (!isset($_SESSION['user_admin'])) {
             </div>
         </div>
     </section>
-    <a href="http://localhost/senaproyecto/html/inicio.html">
+    <a href="http://localhost/senaproyecto/html/index.html">
     <button class="salir">Cerrar Sesión</button>
     </a>
     <script src="http://localhost/senaproyecto/javascript/Funciones.js"></script>
