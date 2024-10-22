@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="senaproyecto/css/indexs.css?v=1.0">
+    <link rel="stylesheet" href="http://localhost/senaproyecto/css/indexs.css?v=1.0">
     <title>CRUD Docentes</title>
 </head>
 <body>
