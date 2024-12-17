@@ -45,7 +45,7 @@
             
             echo "</table>";
             echo "<section>";
-            echo"<a href='http://localhost/senaproyecto/html/CrearAdmin.html'>
+            echo"<a href='http://localhost/senaproyecto/html/crearEstudiante.html'>
             <button class='crear'> Crear </button>
             </a>";
             

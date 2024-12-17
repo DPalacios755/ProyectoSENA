@@ -7,33 +7,30 @@
     <title>Crear Estudiante</title>
 </head>
 <body>
-    <div class="formulario">
+    <h1>Crear Estudiante</h1>
+    <section class="botonVolver">
+        <section class="formulario">
 
             <form action="http://localhost/senaproyecto/php/estudiantes/crearEstudiante.php" method="post" >
-            <h1>Crear Estudiante</h1>
-            
-            <h2><label>Nombre y Apellido:</label></h2>
-
+                <label>Nombre y Apellido:</label>
                 <input type="text" name="nombre" placeholder="Escribe su nombre completo" required />
-                <br></br>
-                <h2><label>Usuario:</label></h2>
+                <label>Usuario:</label>
                 <input type="email" name="correo" placeholder="Escribe su correo completo" required />
                 <label>Documento:</label>
                 <input type="text" name="documento" autofocus placeholder="Escribe sus credenciales" required />
-                <h2><label>Colegio:</label></h2>
+                <label>Colegio:</label>
                 <input type="text" name="Colegio" autofocus placeholder="Escribe sus credenciales" required />
-                <br></br>
-                <h2><label>Tipo de Usuario:</label></h2>
+                <label>Tipo de Usuario:</label>
                 <input type="text" name="rol" autofocus placeholder="Escribe el Tipode usuario" required />
-                <br></br>
-                <h2><label>Curso</label></h2>
+                <label>Curso</label>
                 <input type="text" name="curso" autofocus placeholder="Escribe el Tipode usuario" required />
-                <br></br>
-                <input type="submit"value="Crear" class="Crear">
-            </br>    
+                <input class="boton" type="submit"value="Crear" class="Crear">    
         </form> 
-        <a href="http://localhost/senaproyecto/php/estudiantes/indexEstudiantes.php">
+            <a href="http://localhost/senaproyecto/php/estudiantes/indexEstudiantes.php">
             <button class="volver">Volver</button>
-            </a>   
+            </a>  
+        </section>
+
+    </section> 
 </body>
 </html>
