@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Verificacion.css">
+    <title>Adminstrador</title>
+</head>
+<body>
+    <div class="caja">
+        <section class="contenedor">
+            <h1>Verifición</h1>
+            <h3>¡Llene todos los campos!</h3>
+
+            <form id="loginForm">
+                <label>Correo Institucional</label>
+                <input type="email" id="email" placeholder="Correo Institucional" required>
+
+                <label>Número de Documento</label>
+                <input type="number" id="documento" placeholder="Número de Documento" required>
+
+                <button type="submit" class="enviar">Ingresar</button>
+            </form>
+
+            <p id="mensaje" style="color:red;"></p>
+
+            <a href="../../index.html">
+                <button class="salir">Volver</button>
+            </a>
+
+            <a class="soporte" href="soporte.html">Soporte</a>
+            <a href=""><h5>@DanielPlacios</h5></a>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById("email").value;
+            const documento = document.getElementById("documento").value;
+    
+            const response = await fetch("http://localhost:3000/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, documento })
+            });
+    
+            const data = await response.json();
+            const mensaje = document.getElementById("mensaje");
+            mensaje.textContent = data.message;
+    
+            if (data.success) {
+                if (data.role === "admin") {
+                    window.location.href = `../php/perfilAdmin.php?usuario=${encodeURIComponent(email)}`;
+                } else {
+                    mensaje.style.color = "green";
+                    mensaje.textContent = "Conexión a la red exitosa.";
+                }
+            } else {
+                mensaje.style.color = "red";
+                mensaje.textContent = "Credenciales incorrectas.";
+            }
+        });
+    </script>
+    
+</body>
+</html>

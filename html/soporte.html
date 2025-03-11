@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/senaproyecto/css/formIngreso.css?v=1.1">
+    <link rel="stylesheet" href="../css/formIngreso.css">
     <title>Enviar Correo Electrónico</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
     <div class="caja">
         <Section class="contenedor">
             <h3>¡Llene todos los campos!</h3>
-    <form action="http://localhost/senaproyecto/php/enviarCorreo.php" method="post">
+    <form action=".././php/enviarCorreo.php" method="post">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <label for="email">Correo Electrónico:</label>
@@ -22,7 +22,7 @@
         <textarea id="mensaje" name="mensaje" required></textarea>
         <input type="submit" class="enviar" value="Enviar">
     </form>
-    <a href="http://localhost/senaproyecto/index.html">
+    <a href=".././index.html">
         <button class="salir">volver</button>
         </a>
     </Section>
