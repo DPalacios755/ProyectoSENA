@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="http://localhost/senaproyecto/css/indexs.css?v=1.0">
+    <link rel="stylesheet" href="../../css/indexs.css?v=1.0">
     <title>CRUD Estudiantes</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
                 echo "<td>" . $row['rol'] . "</td>";
                 echo "<td>" . $row['curso'] . "</td>";
                 echo "<td>";
-                echo"<a href='http://localhost/senaproyecto/php/estudiantes/editarEstudiantes.php? correo=" . $row['correo'] ." '>
+                echo"<a href='editarEstudiantes.php? correo=" . $row['correo'] ." '>
                 <button> Editar </button>
                 </a>";
                  // Botón de editar
@@ -45,12 +45,12 @@
             
             echo "</table>";
             echo "<section>";
-            echo"<a href='http://localhost/senaproyecto/html/crearEstudiante.html'>
+            echo"<a href='../../html/crearEstudiante.html'>
             <button class='crear'> Crear </button>
             </a>";
             
             
-            echo"<a href='http://localhost/senaproyecto/php/administrativos/perfilAdmin.php'>
+            echo"<a href='../perfilAdmin.php'>
             <button class='volver'> Salir </button>
             </a>";
             echo "</section>";

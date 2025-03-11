@@ -24,7 +24,7 @@ $curso = $_POST["curso"];
 $query = mysqli_query ($conn," INSERT INTO user_estudiante VALUES ( '".$nombre."','".$correo."','".$Contraseña."','".$Colegio."','".$rol."','".$curso."')");
 
 
-echo "<script> alert('Bienvenido: Su Registro ha sido Exitoso!!!');window.location= 'http://localhost/senaproyecto/php/estudiantes/indexEstudiantes.php' </script>";
+echo "<script> alert('Bienvenido: Su Registro ha sido Exitoso!!!');window.location= 'indexEstudiantes.php' </script>";
 
 
 // Cerrar la conexión|

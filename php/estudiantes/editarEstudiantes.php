@@ -1,5 +1,5 @@
 <?php
-echo "<link rel='stylesheet' href='http://localhost/senaproyecto/css/estilosEditar.css?v=1.1'>";
+echo "<link rel='stylesheet' href='../../css/estilosEditar.css?v=1.1'>";
 // Incluir archivo de conexión a la base de datos
 include('conexionBase.php');
 
@@ -30,7 +30,7 @@ if ($result->num_rows == 1) {
     echo "<label for='password'>  curso:  </label>";
     echo "<input type='text' id='curso' name='curso' value='" . $row['curso'] . "'>";
     echo "<input class='boton 'type='submit' value='Guardar Cambios'>";
-    echo"<a href='http://localhost/senaproyecto/php/estudiantes/indexEstudiantes.php'>
+    echo"<a href='indexEstudiantes.php'>
     <button class='volver'> Salir </button>
     </a>";
     echo "</form>";
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($conn->query($sql) === TRUE) {
         // Si la actualización fue exitosa, redirige a la página principal o muestra un mensaje de éxito
-        header('Location: http://localhost/senaproyecto/php/estudiantes/indexEstudiantes.php');
+        header('Location: indexEstudiantes.php');
     } else {
         // Si hubo un error en la consulta SQL, muestra un mensaje de error o maneja la situación adecuadamente
         echo "Error updating record: " . $conn->error;
