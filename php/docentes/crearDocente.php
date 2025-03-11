@@ -23,7 +23,7 @@ $rol = $_POST["rol"];
 $query = mysqli_query ($conn," INSERT INTO user_docente VALUES ( '".$nombre."','".$correo."','".$Contraseña."','".$Colegio."','".$rol."')");
 
 
-echo "<script> alert('Bienvenido: Su Registro ha sido Exitoso!!!');window.location= 'indexDocentes.php' </script>";
+echo "<script> alert('Bienvenido: Su Registro ha sido Exitoso!!!');window.location= 'http://localhost/senaproyecto/php/docentes/indexDocentes.php' </script>";
 
 
 // Cerrar la conexión

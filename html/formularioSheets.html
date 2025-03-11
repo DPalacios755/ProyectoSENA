@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Verificacion.css">
-    <title>Adminstrador</title>
+    <link rel="stylesheet" href="http://localhost/senaproyecto/css/verificacion.css?v=1.1">
+    <title>verificacion</title>
 </head>
 <body>
     <div class="caja">
@@ -24,11 +24,11 @@
 
             <p id="mensaje" style="color:red;"></p>
 
-            <a href="../../index.html">
+            <a href="http://localhost/senaproyecto/index.html">
                 <button class="salir">Volver</button>
             </a>
 
-            <a class="soporte" href="soporte.html">Soporte</a>
+            <a class="soporte" href="http://localhost/senaproyecto/html/soporte.html">Soporte</a>
             <a href=""><h5>@DanielPlacios</h5></a>
         </section>
     </div>
@@ -52,7 +52,7 @@
     
             if (data.success) {
                 if (data.role === "admin") {
-                    window.location.href = `../php/perfilAdmin.php?usuario=${encodeURIComponent(email)}`;
+                    window.location.href = `http://localhost/senaproyecto/php/perfilAdmin.php?usuario=${encodeURIComponent(email)}`;
                 } else {
                     mensaje.style.color = "green";
                     mensaje.textContent = "Conexión a la red exitosa.";

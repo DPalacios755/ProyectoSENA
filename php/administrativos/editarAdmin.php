@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($conn->query($sql) === TRUE) {
         // Si la actualización fue exitosa, redirige a la página principal o muestra un mensaje de éxito
-        header('Location: indexAdmin.php');
+        header('Location: http://localhost/senaproyecto/php/administrativos/indexAdmin.php');
     } else {
         // Si hubo un error en la consulta SQL, muestra un mensaje de error o maneja la situación adecuadamente
         echo "Error updating record: " . $conn->error;

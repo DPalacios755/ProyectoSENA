@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../css/indexs.css?v=1.0">
+    <link rel="stylesheet" href="http://localhost/senaproyecto/css/indexs.css?v=1.0">
     <title>CRUD Docentes</title>
 </head>
 <body>
@@ -30,12 +30,12 @@
                 echo "<td>" . $row['Colegio'] . "</td>";
                 echo "<td>" . $row['rol'] . "</td>";
                 echo "<td>";
-                echo"<a href='editarDocentes.php? correo=" . $row['correo'] ." '>
+                echo"<a href='http://localhost/senaproyecto/php/docentes/editarDocentes.php? correo=" . $row['correo'] ." '>
                 <button> Editar </button>
                 </a>";
                  // Botón de editar
                 
-                echo "<a href='eliminarDocente.php?  correo=" . $row['correo'] ."'> 
+                echo "<a href='http://localhost/senaproyecto/php/docentes/eliminarDocente.php?  correo=" . $row['correo'] ."'> 
                 <button>Eliminar </button>
                 </a>";
                 echo "</td>";
@@ -44,12 +44,12 @@
             
             echo "</table>";
             echo "<section>";
-            echo"<a href='../../html/crearDocente.html'>
+            echo"<a href='http://localhost/senaproyecto/html/crearDocente.html'>
             <button class='crear'> Crear </button>
             </a>";
             
             
-            echo"<a href='../perfilAdmin.php'>
+            echo"<a href='http://localhost/senaproyecto/php/perfilAdmin.php'>
             <button class='volver'> Salir </button>
             </a>";
             echo "</section>";
