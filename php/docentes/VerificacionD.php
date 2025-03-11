@@ -30,9 +30,9 @@ if (isset($_POST['Correo']) && isset($_POST['Documento'])) {
    
        // Redirigir según el rol
        if ($_SESSION['rol'] == 'Docente') {
-        echo "<script>alert('Conexión al WiFi exitosa. Debes verificar la conexión semanalmente.'); window.location.href = 'http://localhost/senaproyecto/index.html';</script>";
+        echo "<script>alert('Conexión al WiFi exitosa. Debes verificar la conexión semanalmente.'); window.location.href = '../../index.html';</script>";
        } else {
-        echo "<script>alert('Rol no reconocido.'); window.location.href = 'http://localhost/senaproyecto/index.html';</script>";
+        echo "<script>alert('Rol no reconocido.'); window.location.href = '../../index.html';</script>";
        }
    } else {
        // Usuario o contraseña incorrectos

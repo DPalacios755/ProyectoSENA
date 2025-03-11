@@ -13,7 +13,7 @@ $sql = "DELETE FROM user_docente WHERE correo = '$idUsuario'";
 $resultado = mysqli_query($conn, $sql);
 
 if ($resultado) {
-    echo "<script>alert('Usuario eliminado correctamente.');window.location='http://localhost/senaproyecto/php/docentes/indexDocentes.php';</script>";
+    echo "<script>alert('Usuario eliminado correctamente.');window.location='indexDocentes.php';</script>";
 } else {
     echo "<script>alert('Error: No se pudo eliminar el usuario.');</script>";
 }

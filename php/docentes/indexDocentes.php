@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="http://localhost/senaproyecto/css/indexs.css?v=1.0">
+    <link rel="stylesheet" href="../../css/indexs.css?v=1.0">
     <title>CRUD Docentes</title>
 </head>
 <body>
@@ -44,12 +44,12 @@
             
             echo "</table>";
             echo "<section>";
-            echo"<a href='http://localhost/senaproyecto/html/crearDocente.html'>
+            echo"<a href='../../html/crearDocente.html'>
             <button class='crear'> Crear </button>
             </a>";
             
             
-            echo"<a href='http://localhost/senaproyecto/php/administrativos/perfilAdmin.php'>
+            echo"<a href='../perfilAdmin.php'>
             <button class='volver'> Salir </button>
             </a>";
             echo "</section>";
