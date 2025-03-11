@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color1: linear-gradient(to right, #ffffff, #a6a6a6);
+    --color2: #48cfcb;
+    --color3: #229799;
+    --color4: #424242;
+}
+
+body {
+    background: var(--color1);
+    font-family: "Quicksand", sans-serif;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: var(--color4);
+    text-shadow: 2px 2px 5px rgb(173, 173, 173);
+    font-size: 2rem;
+}
+
+h3 {
+    background-color: var(--color3);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid var(--color3);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color3);
+    color: white;
+}
+
+.soporte, h5 {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#mensaje {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+}
