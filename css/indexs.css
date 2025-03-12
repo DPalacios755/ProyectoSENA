@@ -13,6 +13,12 @@ h1{
     font-size: 3rem;
     width: auto;
 }
+
+td{
+    background-color: white;
+    
+}
+
 table{
     width: 100%;
     justify-content: center;
@@ -22,10 +28,10 @@ table{
 }
 th{
     
-    font-size: 1rem;
+    font-size: 1.1rem;
     border:2px solid;
     border-color: black;
-    color: white;
+    color: black;
     background-color: #0097b2;
     border-radius: 10px;
     
@@ -50,36 +56,48 @@ button{
     font-weight: bold;
     gap: 10px;
     width: 100%;
-}
-button:hover{
     background-color: #0097b2;
     
 }
+
+.beditar:hover{
+    background-color:#229799;
+    color: white;
+    font-size: 1rem;
+}
+.beliminar:hover{
+    background-color: red;
+    color: white;
+}
+
 section{
     display: flex;
     justify-content: center;
     width: 100%;
     gap: 10px;
-    
-
-    
-    
 }
-.crear{
+
+.bcrear{
     width: 100%;
     justify-content: center;
     flex-direction: column;
     font-size: 1.5rem;
-
-    
+    background-color:transparent;
+    width: 30%;
+}
+.bcrear:hover{
+    background-color: #0097b2;
+    color: black;
 }
 .volver{
-    width:100%;
+    width:30%;
     justify-content: center;
     font-size: 1.5rem;
+    background-color:transparent;
+    
 }
 .volver:hover{
-    background-color: #424242;
+    background-color: #229799;
     color:white;
 }
 a{
