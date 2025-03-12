@@ -17,7 +17,7 @@ body {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background: white;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -26,12 +26,12 @@ body {
 h1 {
     color: var(--color4);
     text-shadow: 2px 2px 5px rgb(173, 173, 173);
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 h3 {
     background-color: var(--color3);
-    color: white;
+    color:black;
     padding: 10px;
     border-radius: 10px;
     margin: 10px 0;
@@ -41,6 +41,10 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+label{
+    font-weight: bold;
+    text-align: left;
 }
 
 input {
@@ -62,7 +66,7 @@ button {
 
 button:hover {
     background-color: var(--color3);
-    color: white;
+    
 }
 
 .soporte, h5 {
