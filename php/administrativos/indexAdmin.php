@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/senaproyecto/css/indexs.css?v=1.0">
+    <link rel="stylesheet" href="http://localhost/senaproyecto/css/indexs.css?v=1.1">
     <title>CRUD Administrativos</title>
 </head>
 <body>
@@ -37,12 +37,12 @@
                 echo "<td>" . $row['rol'] . "</td>";
                 echo "<td>";
                 echo"<a href='editarAdmin.php? correo=" . $row['correo'] ." '>
-                <button> Editar </button>
+                <button class='beditar'> Editar </button>
                 </a>";
                  // Botón de editar
                 
                 echo "<a href='eliminarAdmin.php?  correo=" . $row['correo'] ."'> 
-                <button>Eliminar </button>
+                <button class='beliminar'>Eliminar </button>
                 </a>";
                 echo "</td>";
                 echo "</tr>";
@@ -51,7 +51,7 @@
             echo "</table>";
             echo "<section>";
             echo"<a href='http://localhost/senaproyecto/html/CrearAdmin.html'>
-            <button class='crear'> Crear </button>
+            <button class='bcrear'> Crear </button>
             </a>";
             
             

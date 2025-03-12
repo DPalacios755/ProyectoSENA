@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="http://localhost/senaproyecto/css/indexs.css?v=1.0">
+    <link rel="stylesheet" href="http://localhost/senaproyecto/css/indexs.css?v=1.1">
     <title>CRUD Estudiantes</title>
 </head>
 <body>
@@ -18,6 +18,7 @@
         $result = $conn -> query ($sql);
 
         if ($result->num_rows > 0) {
+            
             echo "<table>";
             echo "<tr><th>Nombre Completo</th><th>Email</th><th>Documento</th><th>Tipo de Usuario</th><th>Colegio</th><th>Curso</th><th>Funciones</th></tr>";
 
@@ -32,21 +33,22 @@
                 echo "<td>" . $row['curso'] . "</td>";
                 echo "<td>";
                 echo"<a href='editarEstudiantes.php? correo=" . $row['correo'] ." '>
-                <button> Editar </button>
+                <button class='beditar'> Editar </button>
                 </a>";
                  // Botón de editar
                 
                 echo "<a href='eliminarEstudiante.php?  correo=" . $row['correo'] ."'> 
-                <button>Eliminar </button>
+                <button class='beliminar'>Eliminar </button>
                 </a>";
                 echo "</td>";
                 echo "</tr>";
             }
             
             echo "</table>";
+            
             echo "<section>";
             echo"<a href='../../html/crearEstudiante.html'>
-            <button class='crear'> Crear </button>
+            <button class='bcrear'> Crear </button>
             </a>";
             
             
