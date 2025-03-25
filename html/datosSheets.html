@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de Google Sheets</title>
+    <link rel="stylesheet" href="http://localhost/senaproyecto/css/datos.css">
+</head>
+<body>
+    <h1 id="titulo">Cargando datos...</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cargo</th>
+                <th>Correo</th>
+                <th>Documento</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaDatos">
+            <!-- Aquí se cargarán los datos -->
+        </tbody>
+    </table>
+
+    <h2>Agregar Usuario</h2>
+    <input type="text" id="nombre" placeholder="Nombre">
+    <input type="text" id="cargo" placeholder="Cargo">
+    <input type="email" id="correo" placeholder="Correo">
+    <input type="text" id="documento" placeholder="Documento">
+    <button onclick="agregarUsuario()">Agregar</button>
+
+    <button onclick="volver()">Volver al Dashboard</button>
+
+    <script>
+        let hoja = "";
+
+        async function cargarDatos() {
+            const urlParams = new URLSearchParams(window.location.search);
+            hoja = urlParams.get("hoja");
+
+            document.getElementById("titulo").innerText = `Datos de ${hoja}`;
+
+            const response = await fetch(`http://localhost:3000/datos?hoja=${hoja}`);
+            const datos = await response.json();
+
+            const tabla = document.getElementById("tablaDatos");
+            tabla.innerHTML = "";
+
+            datos.forEach(row => {
+                let tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${row[0]}</td>
+                    <td>${row[1]}</td>
+                    <td>${row[2]}</td>
+                    <td>${row[3]}</td>
+                    <td>
+                        <button onclick="editarUsuario('${row[2]}', '${row[0]}', '${row[1]}', '${row[3]}')">Editar</button>
+                        <button onclick="eliminarUsuario('${row[2]}')">Eliminar</button>
+                    </td>
+                `;
+                tabla.appendChild(tr);
+            });
+        }
+
+        async function agregarUsuario() {
+            const nombre = document.getElementById("nombre").value;
+            const cargo = document.getElementById("cargo").value;
+            const correo = document.getElementById("correo").value;
+            const documento = document.getElementById("documento").value;
+
+            if (!hoja || !nombre || !cargo || !correo || !documento) {
+                alert("Todos los campos son obligatorios.");
+                return;
+            }
+
+            const response = await fetch("http://localhost:3000/agregar", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ hoja, nombre, cargo, correo, documento })
+            });
+
+            const resultado = await response.json();
+            alert(resultado.message);
+            cargarDatos();
+        }
+
+        async function editarUsuario(correo, nombre, cargo, documento) {
+            const nuevoNombre = prompt("Nuevo nombre:", nombre);
+            const nuevoCargo = prompt("Nuevo cargo:", cargo);
+            const nuevoDocumento = prompt("Nuevo documento:", documento);
+
+            if (!nuevoNombre || !nuevoCargo || !nuevoDocumento) return;
+
+            const response = await fetch("http://localhost:3000/editar", {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ hoja, correo, nuevoNombre, nuevoCargo, nuevoDocumento })
+            });
+
+            const resultado = await response.json();
+            alert(resultado.message);
+            cargarDatos();
+        }
+
+        async function eliminarUsuario(correo) {
+            const confirmacion = confirm("¿Estás seguro de eliminar este usuario?");
+            if (!confirmacion) return;
+
+            const response = await fetch("http://localhost:3000/eliminar", {
+                method: "DELETE",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ hoja, correo })
+            });
+
+            const resultado = await response.json();
+            alert(resultado.message);
+            cargarDatos();
+        }
+
+        function volver() {
+            window.location.href = "dashboard.html";
+        }
+
+        cargarDatos();
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrador</title>
+    <link rel="stylesheet" href="http://localhost/senaproyecto/css/dashboard.css">
+</head>
+<body>
+    <h1>Dashboard del Administrador</h1>
+    <h3>Seleccione una categoría para ver los datos:</h3>
+
+    <button onclick="verDatos('Administradores')">Ver Administradores</button>
+    <button onclick="verDatos('Docentes')">Ver Docentes</button>
+    <button onclick="verDatos('Estudiantes')">Ver Estudiantes</button>
+
+    <script>
+        function verDatos(hoja) {
+            window.location.href = `datosSheets.html?hoja=${hoja}`;
+        }
+    </script>
+</body>
+</html>
